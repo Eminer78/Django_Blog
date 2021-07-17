@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from blogposts import views as blogposts_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',blogposts_views.index, name='index'),  # this is the homepage path
 ]
