@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def index(request):
     return render(request, 'blogposts/blog_home.html')
+
+def blog_post(request):
+    return render(request, 'blogposts/blog_post.html')
