@@ -19,6 +19,7 @@ from . import views as blogposts_views
 
 urlpatterns = [
     path('',blogposts_views.index, name='index'),           # this is the homepage path
-    path('post/',blogposts_views.blog_post, name='post'),   # this is the post path
+    path('posts/',blogposts_views.blog_posts, name='posts'),   # this is the post path
+    path('posts/new', blogposts_views.new_post, name='new_post'),
     path('about/',blogposts_views.about, name='about'),     # this is the path to about
 ]
