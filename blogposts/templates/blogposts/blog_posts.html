@@ -1,3 +1,13 @@
 {% extends "base.html" %} 
   {% block content %} 
+    {% for post in blogposts %}
+    <h2>{{  post.title }}</h2>
+    <p>Author: {{ post.author }}. Publish Date:{{ post.publish_date }}</p>
+    
+    {% if post.description|length <= 5 %}
+      <p>Description is currently not available</p>
+    {% else %}
+      <p>Description: {{ post.description }}<a href="{%url 'post' post.id %}">Read more</a></p>
+    {% endif %}  
+    {% endfor %}
 {% endblock %}

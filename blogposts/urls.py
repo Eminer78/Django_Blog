@@ -18,8 +18,9 @@ from django.urls import include,path
 from . import views as blogposts_views
 
 urlpatterns = [
-    path('',blogposts_views.index, name='index'),           # this is the homepage path
-    path('posts/',blogposts_views.blog_posts, name='posts'),   # this is the post path
-    path('posts/new', blogposts_views.new_post, name='new_post'),
-    path('about/',blogposts_views.about, name='about'),     # this is the path to about
+    path('',blogposts_views.index, name='index'),                               
+    path('posts/',blogposts_views.blog_posts, name='posts'),                    
+    path('posts/new', blogposts_views.new_post, name='new_post'),               
+    path('posts/post/<int:post_id>', blogposts_views.blog_post, name='post'),
+    path('about/',blogposts_views.about, name='about'),                         
 ]

@@ -1,0 +1,11 @@
+{% extends "base.html" %} 
+{% block content %}
+    <h2>{{ post.title }}</h2>
+    <p>Author: {{ post.author }}. Published on {{ post.publish_date }}</p>
+    {% if post.description|length <= 5 %} 
+    <p>Description is currently not available.</p>
+    {% else %}
+    <p>{{ post.description }} 
+    {% endif %}
+    <p><a href="{% url 'posts' %}">Back to blog posts</a></p>
+{% endblock %}

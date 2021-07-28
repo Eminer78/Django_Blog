@@ -15,9 +15,16 @@ def index(request):
 def blog_posts(request):
     context = {
         'title_text': 'blog posts',
+        'blogposts': Blogpost.objects.all(),
     }
     return render(request, 'blogposts/blog_posts.html', context)
 
+def blog_post(request, post_id):
+    context = {
+        'title_text': 'test',
+        'post': Blogpost.objects.get(id=post_id)
+    }
+    return render(request, 'blogposts/blog_post.html', context)
 
 def new_post(request):
     if request.method == "POST":
