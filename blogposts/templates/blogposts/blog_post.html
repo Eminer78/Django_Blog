@@ -1,11 +1,20 @@
 {% extends "base.html" %} 
 {% block content %}
-    <h2>{{ post.title }}</h2>
-    <p>Author: {{ post.author }}. Published on {{ post.publish_date }}</p>
-    {% if post.description|length <= 5 %} 
-    <p>Description is currently not available.</p>
-    {% else %}
-    <p>{{ post.description }} 
-    {% endif %}
-    <p><a href="{% url 'posts' %}">Back to blog posts</a></p>
+<div class="container">
+    <div class="border border-secondary rounded my-2">
+        <h2 class="mx-2">{{ post.title }}</h2>
+        <div class="row">
+            <span class="mx-2">Author: {{ post.author }}</span>
+        </div>
+        <div class="row pb-2">
+            <span class="mx-2">Published Date: {{ post.publish_date }}</span>
+        </div>
+        {% if post.description|length <= 5 %} 
+        <p class="mx-2">Description is currently not available.</p>
+        {% else %}
+        <p class="mx-2">{{ post.description }} 
+        {% endif %}
+        <p class="mx-2"><a href="{% url 'adventures' %}">Back to Recent Adventures</a></p>
+    </div>
+</div>
 {% endblock %}

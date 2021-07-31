@@ -1,5 +1,4 @@
 """blog URL Configuration
-
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
 Examples:
@@ -19,8 +18,8 @@ from . import views as blogposts_views
 
 urlpatterns = [
     path('',blogposts_views.index, name='index'),                               
-    path('posts/',blogposts_views.blog_posts, name='posts'),                    
-    path('posts/new', blogposts_views.new_post, name='new_post'),               
-    path('posts/post/<int:post_id>', blogposts_views.blog_post, name='post'),
+    path('adventures/',blogposts_views.blog_adventures, name='adventures'),                    
+    path('adventures/new', blogposts_views.new_adventure, name='new_adventure'),               
+    path('adventures/post/<int:post_id>', blogposts_views.blog_post, name='post'),
     path('about/',blogposts_views.about, name='about'),                         
 ]

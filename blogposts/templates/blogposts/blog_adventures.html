@@ -1,0 +1,24 @@
+{% extends "base.html" %} 
+  {% block content %} 
+    {% for post in blogposts %}
+          <div class="container">
+            <div class="border border-secondary rounded my-2">
+              <h2 class="mx-2">{{  post.title }}</h2>
+              <div class="row">
+                <span class="mx-2">Author: {{ post.author }}</span>
+              </div>
+              <div class="row pb-2">
+                <span class="mx-2">Publish Date: {{ post.publish_date }} </span>
+              </div>
+          
+          {% if post.description|length <= 5 %}
+            <p class="mx-2" >Description is currently not available</p>
+          {% else %}
+            <p class="mx-2">Description: {{ post.description }}<a class = "mx-2" href="{%url 'post' post.id %}">Read more</a></p>
+          </div>
+          </div>
+          {% endif %}  
+          {% endfor %}
+    
+  {% endblock %}
+    

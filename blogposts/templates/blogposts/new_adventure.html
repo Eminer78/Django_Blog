@@ -1,0 +1,30 @@
+{% extends "base.html" %} 
+  {% block content %} 
+  <div class="container">
+    <div class = "row justify-content-center">
+    <div class="col-8 text-center py-4" style="color:royalblue; font-size:1.25rem">Share your ideas for new adventures for Penny the Pitbull and/or 
+    share the adventures that you and your fur baby have taken!</div>
+  </div>
+  <form action="{%url 'new_adventure'%}" method="POST">
+    {% csrf_token %}
+    <div class = "form-group justify-content-center">
+      <label>Title:
+          <input class="form-control" type="text" name="title" required/>
+      </label>
+    </div>
+    <div class = "form-group">
+      <label>Author:
+        <input class="form-control" type="text" name="author" required/>
+      </label>
+    </div>
+    <div class = "form-group">
+    <label>
+        Post:
+        <textarea class="form-control" name="description" cols="30" rows="10" required></textarea>
+    </label>
+  </div>
+    <button class="btn btn-primary" type="submit">New Post</button>
+  
+  </form>
+</div>
+{% endblock %}
