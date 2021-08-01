@@ -36,7 +36,7 @@ def new_adventure(request):
             author = request.POST['author'],
             description = request.POST['description'],
         )
-        new_adventure.save()  
+        new_post.save()  
         context = {
             'title_text': 'your post "' + request.POST['title'] + '" has been created'
         }
@@ -44,7 +44,7 @@ def new_adventure(request):
     elif request.method == "GET": 
         print('GET request')
         context = {
-            'title_text': 'new Adventure'
+            'title_text': 'new adventure'
         }
         return render(request, 'blogposts/new_adventure.html', context)
 
