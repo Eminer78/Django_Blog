@@ -21,5 +21,6 @@ urlpatterns = [
     path('adventures/',blogposts_views.blog_adventures, name='adventures'),                    
     path('adventures/new', blogposts_views.new_adventure, name='new_adventure'),               
     path('adventures/post/<int:post_id>', blogposts_views.blog_post, name='post'),
-    path('about/',blogposts_views.about, name='about'),                         
+    path('about/',blogposts_views.about, name='about'),     
+                       
 ]

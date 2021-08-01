@@ -1,0 +1,30 @@
+html, body{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    color: darkviolet;
+    background-color: lightgray;
+    min-width: 570px;
+}
+
+a{
+    color:darkviolet;
+}
+#base-welcome{
+    border-top:solid;
+    border-bottom:solid;
+    border-color:darkviolet;
+}
+#new-adventure-border{ 
+    background-color:white;
+    border-style:double;
+    border-color:darkviolet;
+    border-width: 5px;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 2.5% 1% 2.5% 1%;
+}
+
+#home-guide-text{
+    font-size: larger;
+    font-weight: bolder;
+    
+}
