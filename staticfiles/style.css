@@ -7,23 +7,12 @@ html, body{
 
 a{
     color:darkviolet;
-    
 }
-#base-title{
-    font-weight: bolder;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-
 #base-welcome{
     border-top:solid;
     border-bottom:solid;
     border-color:darkviolet;
-    color:black;
 }
-
 #new-adventure-border{ 
     background-color:white;
     border-style:double;
@@ -35,26 +24,8 @@ a{
 }
 
 #home-guide-text{
-    
-    font-weight: bolder;
-}
-
-#f-label-text{
-    font-size: larger;
-}
-
-#na-para-text{
     font-size: larger;
     font-weight: bolder;
-    padding: 1%;   
-}
-
-#b-adventures-labels{
     color:black;
 }
 
-#submit-btn{
-    background-color: darkviolet;
-    border-color: darkviolet;
-    color: white;
-}
