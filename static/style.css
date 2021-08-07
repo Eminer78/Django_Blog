@@ -13,8 +13,13 @@ footer{
     text-align: center;
 }
 
+form{
+    font-size: large;
+}
+
 a{
     color:darkviolet;
+    font-size: large;
     
 }
 .base-title{
@@ -55,8 +60,7 @@ a{
 }
 
 #na-para-text{
-    font-size: larger;
-    font-weight: bolder;
+    font-size: x-large;
     padding: 1%; 
     text-align: center;  
 }
