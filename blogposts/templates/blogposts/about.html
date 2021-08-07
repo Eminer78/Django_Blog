@@ -1,35 +1,33 @@
 {% extends "base.html" %} 
-
 {% block content %} 
 <div class="container">
     <h2 class="row justify-content-center" id="about-h2-text">
         Hi, I'm Penny.
     </h2>
-    <div class="row justify-content-center" id="about-border">
-        <p class="col-lg-5" id="about-text-style"> I am a six year old Pitbull mix, yes a mix!!! 
+    <div class="row justify-content-center py-4 my-4" style="border:double;border-color: darkviolet; border-width: 5px; border-radius: 20px;">
+        <p class="col-lg-5" > I am a six year old Pitbull mix, yes a mix!!! 
             I donna know what I'm mixed with but I'm cute right!!! I was rescued 
             from Paws Chicago in 2015 at the age of 4 months, so I guess that makes 
             me 6 years old or something. Here I am the first night with my family. 
         </p>
         {% load static %}
-        
         <img 
           src="{% static 'base/img/penny_4months.jpg' %}"
           alt="blogging"
           style="width: auto; height:max-content;"
-          />
-    </div> 
-    <div class="row justify-content-center" id="about-border">
-        <p class="col-lg-5" id="about-text-style" > 
-              Here I'm spending my afternoon taking a nap in the warm summer sun. 
-              This is my favorite thing to do on hot summer days!
-        </p>
-        {% load static %}
-        <img 
-          src="{% static 'base/img/penny_lounging.jpg' %}"
-          alt="blogging"
-          style="width: auto; height:max-content;"
-        />
+          />   
+    </div>
+
+    <div class="row justify-content-center py-4 my-4" style="border:double;border-color: darkviolet; border-width: 5px; border-radius: 20px;">
+            <p class="col-lg-5" > 
+                Here I'm spending my afternoon taking a nap in the warm summer sun. 
+                This is my favorite thing to do on hot summer days!
+            </p>
+            {% load static %}
+            <img 
+            src="{% static 'base/img/penny_lounging.jpg' %}"
+            alt="blogging"
+            style="width: auto; height:max-content;"/>
     </div>
 </div>        
 {% endblock %}
