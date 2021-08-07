@@ -1,20 +1,29 @@
-{% extends "base.html" %} 
-{% block content %}
+{% extends "base.html" %} {% block content %}
 <div class="container">
-    <div id="new-adventure-border">
-        <h2 class="mx-2">{{ post.title }}</h2>
-        <div class="row">
-            <span><span class="mx-2" id="b-adventures-labels">Author:</span><span> {{ post.author }}</span></span>
-        </div>
-        <div class="row pb-2">
-            <span><span class="mx-2" id="b-adventures-labels">Publish Date: </span><span>{{ post.publish_date }} </span></span>
-        </div>
-        {% if post.description|length <= 5 %} 
-        <p class="mx-2">Description is currently not available.</p>
-        {% else %}
-        <p class="mx-2">{{ post.description }} 
-        {% endif %}
-        <p class="mx-2"><a id="b-adventures-labels" href="{% url 'adventures' %}">Back to Recent Adventures</a></p>
+  <div id="new-adventure-border">
+    <h2 class="mx-2">{{ post.title }}</h2>
+    <div class="row">
+      <span
+        ><span class="mx-2" id="b-adventures-labels">Author:</span
+        ><span> {{ post.author }}</span></span
+      >
     </div>
+    <div class="row pb-2">
+      <span
+        ><span class="mx-2" id="b-adventures-labels">Publish Date: </span
+        ><span>{{ post.publish_date }} </span></span
+      >
+    </div>
+    {% if post.description|length <= 5 %}
+    <p class="mx-2">Description is currently not available.</p>
+    {% else %}
+    <p class="mx-2">{{ post.description }} {% endif %}</p>
+
+    <p class="mx-2">
+      <a id="b-adventures-labels" href="{% url 'adventures' %}"
+        >Back to Recent Adventures</a
+      >
+    </p>
+  </div>
 </div>
 {% endblock %}

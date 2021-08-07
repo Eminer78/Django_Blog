@@ -5,6 +5,14 @@ html, body{
     min-width: 570px;
 }
 
+footer{
+    color:darkviolet;
+    margin: auto;
+    padding: 1%;
+    padding-top: 3%;
+    text-align: center;
+}
+
 a{
     color:darkviolet;
     
@@ -35,7 +43,6 @@ a{
 }
 
 #home-guide-text{
-    
     font-weight: bolder;
 }
 
@@ -46,15 +53,44 @@ a{
 #na-para-text{
     font-size: larger;
     font-weight: bolder;
-    padding: 1%;   
+    padding: 1%; 
+    text-align: center;  
 }
 
 #b-adventures-labels{
     color:black;
 }
 
+#summary-description{
+    display:inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 15ch;
+}
+
 #submit-btn{
     background-color: darkviolet;
     border-color: darkviolet;
     color: white;
+}
+
+#about-text-style{
+    font-size: xx-large;
+    margin: auto;
+}
+
+#about-h2-text{
+    font-size:4em;
+    font-weight: bolder;
+}
+
+#about-border{
+    border-style:double;
+    border-color:darkviolet;
+    border-width: 5px;
+    border-radius: 10px;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    margin: 5%;
 }
